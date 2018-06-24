@@ -1,8 +1,11 @@
+/** Overlay on column images **/
+
+/** Keeps content 100% in window w/ no overlap **/
 * {
   box-sizing: border-box;
 }
 
-
+/** Styles logo **/
 header {
   background-color: white;
   padding: 5px;
@@ -18,11 +21,7 @@ h1 {
   color: #003466;
 }
 
-p {
-  font-family: sans-serif;
-}
-
-/** Navigation **/
+/** Navigation *********************/
 nav {
   width: 100%;
   font-family: 'Tajawal', sans-serif;
@@ -37,6 +36,7 @@ nav ul {
   display: inline-flex;
 }
 
+/** Nav spacing **/
 nav ul li {
   padding: 10px;
 }
@@ -67,7 +67,6 @@ nav ul li a {
 img {
   width: 100%;
   height: auto;
-
 }
 
 img.header-image {
@@ -75,7 +74,24 @@ img.header-image {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  height: 60vh;
+  height: 80vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80vh;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #003466;
+}
+
+.container:hover .overlay {
+  opacity: .7;
 }
 
 .text-overlay {
@@ -97,6 +113,10 @@ img.header-image {
 }
 
 /** Content **/
+p {
+  font-family: sans-serif;
+}
+
 section {
   float: left;
   width: 100%;
@@ -114,6 +134,13 @@ article {
   align-items: center;
 }
 
+.content-title {
+  font-family: 'Tajawal', sans-serif;
+  font-style: italic;
+  font-size: 30px;
+  text-align: center;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -122,8 +149,8 @@ article {
 
 .column {
   position: relative;
-  flex: 25%;
-  max-width: 25%;
+  flex: 33.3333%;
+  max-width: 33.3333%;
   padding: 0 4px;
 }
 
@@ -138,7 +165,7 @@ article {
   top: 50%;
   width: 100%;
   text-align: center;
-  font-size: 20px;
+  font-size: 35px;
   color: white;
   text-shadow: 2px 2px black;
   font-family: sans-serif;
@@ -146,10 +173,25 @@ article {
 
 .news-feed {
   font-family: 'Tajawal', sans-serif;
-  font-size: 35px;
   text-align: center;
 }
 
+.col-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80vh;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #003466;
+}
+
+.container:hover .col1-overlay {
+  opacity: .7;
+}
 
 /** Footer **/
 footer {
@@ -167,24 +209,29 @@ footer {
 .footer-list-top {
   width: 33.333%
 }
+
 .footer-list-top > li {
   text-align: center;
   padding-bottom: 10px
 }
+
 .footer-list-header {
   padding: 10px 0 5px 0;
   color: #fff;
   font: 2.3vw "Oswald", sans-serif
 }
+
 .footer-list-anchor {
   font: 1.3em "Open Sans", sans-serif
 }
+
 .footer-social-section {
   width: 100%;
   align-items: center;
   position: relative;
   margin-top: 10px;
 }
+
 .footer-social-section::after {
   content: "";
   position: absolute;
@@ -194,46 +241,59 @@ footer {
   border-top: 1px solid $primary-line-color;
   width: calc(100% - 20px)
 }
+
 .footer-social-overlap {
   position: relative;
   z-index: 2;
   padding: 0 20px
 }
+
 .footer-social-connect {
   display: flex;
   align-items: center;
   font: 3.5em "Oswald", sans-serif;
   color: #fff
 }
+
 .footer-social-small {
   font-size: 0.6em;
   padding: 0px 20px
 }
+
 .footer-social-overlap > a {
   font-size: 3em;
   color: #003466;
 }
+
 .footer-social-overlap > a:not(:first-child) {
   margin-left: 0.38em
 }
+
 .footer-bottom-section {
   width: 100%;
   padding: 10px;
   border-top: 1px solid $primary-line-color;
 }
+
 .footer-bottom-section > div:first-child {
   margin-right: auto
 }
+
 .footer-bottom-wrapper {
   font-size: 15px;
   color: black;
   text-align: center;
   width: 100%;
 }
+
 .footer-address {
   display: inline;
   font-style: normal
 }
+
+
+/** Responsive Layout **/
+
 @media only screen and (max-width: 768px) {
   .footer-list-header {
     font-size: 2em
@@ -251,6 +311,7 @@ footer {
     font-size: 1.3em
   }
 }
+
 @media only screen and (max-width: 568px) {
   main {
     font-size: 5em
@@ -294,6 +355,7 @@ footer {
     margin-top: 10px
   }
 }
+
 @media only screen and (max-width: 480px) {
   .footer-social-overlap > a {
     margin: auto
@@ -305,6 +367,7 @@ footer {
     display: block
   }
 }
+
 @media only screen and (max-width: 320px) {
   .footer-list-header {
     font-size: 2.2em
@@ -323,7 +386,6 @@ footer {
   }
 }
 
-/** Responsive Layout **/
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
