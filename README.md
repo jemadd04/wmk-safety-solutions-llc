@@ -1,2 +1,2 @@
 # wmk-safety-solutions-llc
-wmk website
+Welcome to my Code Louisville project! For my front end web development project I took on the task of creating a website for a local business here in Louisville, KY. This site uses multiple elements that I learned during my time with Code Louisville, including Bootstrap, jQuery, custom CSS, JavaScript, and much more. Please feel free to contact me with any feedback - it's always greatly appreciated!
