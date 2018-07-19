@@ -1,0 +1,2 @@
+$('#submitMessage').hide();
+$('#submitMessage').fadeIn();

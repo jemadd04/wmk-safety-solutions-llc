@@ -16,11 +16,15 @@
     <link href="https://fonts.googleapis.com/css?family=Tajawal:200" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   </head>
 
   <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+    <div id="submitMessage">
+      Thanks! We will be in touch shortly!
+    </div>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
       <a class="navbar-brand order-1 mr-0" href="https://www.teamtreehouse.com" target="_blank">Contact Us</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +65,7 @@
       <div id="about" class="row">
         <div class="col-lg">
           <h3 class="mb-4">Experts in Safety</h3>
-            <img class="content-img" src="img/charging1.jpg" alt="charging">
+            <img class="content-img img-fluid rounded d-none d-sm-block" src="img/charging1.jpg" alt="charging">
             <p>WMK Safety Solutions is here to equip you with the safety knowledge pertaining to electric vehicle safety equipment (EVSE), or more commonly referred to as 'charging stations'.</p>
             <p>Whether you are a first responder or a new owner of EVSE, it's vital to equip yourself with the know-how to keep you and your surroundings safe.</p>
             <p>The purpose of this website is to be a reliable resource for both EVSE safety and up-to-date news pertaining to everything from industry regulations to infrastructure-related activities.</p>
@@ -149,38 +153,45 @@
       </div>
       <!-- End of three column content -->
 
+      <!-- Contact Form -->
+      <div class="container pt-4">
+        <h2>Contact Us</h2>
+        <form>
+          <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+          </div>
+          <div class="form-group">
+            <label for="inputPhone">Phone Number</label>
+            <input type="text" class="form-control" id="inputPhone" placeholder="(xxx) xxx-xxxx">
+          </div>
+          <div class="form-group">
+            <label for="inputComment">Comments/Questions</label>
+            <textarea class="form-control" id="inputComment" rows="3"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg">Submit</button>
+        </form>
+      </div>
+      <!-- End of contact form -->
+      <hr>
 
       <!-- footer -->
-      <div class="row py-3">
-        <div class="col-md-7">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Community</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tracks</a>
-            </li>
-            <li class="nav-item">
-              <div class="btn-group dropup">
-                <button type="button" class="btn btn-outline-info">Other Confs</button>
-                <button type="button" class="btn btn-outline-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">CSS Conf</a>
-                  <a class="dropdown-item" href="#">Python Conf</a>
-                  <a class="dropdown-item" href="#">Java Conf</a>
-                  <a class="dropdown-item" href="#">Swift Conf</a>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <div class="container">
+        <i class="fab fa-facebook-f fa-3x"></i>
+        <i class="fab fa-facebook-f fa-3x"></i>
+        <i class="fab fa-facebook-f fa-3x"></i>
         <div class="col-md text-md-right">
           <small>&copy; 2018 WMK Safety Solutions LLC</small>
         </div>
       </div>
       <!-- /footer -->
     </div> <!-- End of main container  -->
+    <!--jQuery tags  -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	  <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

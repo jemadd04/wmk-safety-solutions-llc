@@ -1,18 +1,20 @@
-.content-img {
-  width: 575px;
-  height: auto;
-  padding-bottom: 10px;
-}
-
-.navbar {
-  background-color: #65666B;
-}
-
+/* Changes link texts to white */
 .navbar-dark .navbar-nav .nav-link {
   color: white;
 }
 
+/* Adds space between nav links */
+li {
+  margin-right: 40px;
+}
+
+/* Jumbotron image */
 .jumbotron {
   background-image: url('../img/charging3.jpg');
   background-size: cover;
+}
+
+/* Space between photo and text */
+.content-img {
+  padding-bottom: 10px;
 }
