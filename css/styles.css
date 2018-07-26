@@ -18,3 +18,22 @@ li {
 .content-img {
   padding-bottom: 10px;
 }
+
+/*Changes color of 'WMK' and makes it bold  */
+.primary-text {
+  color: #17A2B8;
+  font-weight: 400;
+}
+
+/*Gives additional padding to content box  */
+.primary-content {
+  padding: 30px;
+}
+
+.navbar-toggler {
+  cursor: pointer;
+}
+
+#formSubmit {
+  cursor: pointer;
+}
